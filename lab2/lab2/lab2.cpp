@@ -1,15 +1,22 @@
-﻿#include "Pokemon.h"
+﻿#include "Nidorina.h"
+#include "Throh.h"
+#include "Pokemon.h"
+#include "Battle.h" 
 #include <iostream>
+#include "FireMove.h"
+#include "Hitmonlee.h"
+#include "Nidoqueen.h"
+#include "NoMove.h"
+#include "ConfusionMove.h"
+#include "Tyrogue.h"
+#include "NidoranF.h"
+#include "Throh.h"
+#include <iostream>
+#include "Console.h"
 int main()
 {
-	//ЛУЧШЕ В МЭЙНЕ СДЕЛАТЬ ОДНУ ТОЧКУ ОТЧЕТА ДЛЯ РАНДОМА
-
-	Pokemon p("мишка", 1);
-	p.setStats(1, 3, 5, 6, 7, 7);
-	std::cout << p.getLevel() << std::endl;
-	p.setType(1, Type::ICE);
-	Effect::burn(p);
-	
-	
+    srand((int)time(0));
+    Console console;
+    console.game();
+    return 0;
 }
-

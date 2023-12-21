@@ -1,3 +1,4 @@
+#include <iostream>
 #pragma once
 enum class Stat {
 	HP,
@@ -7,5 +8,7 @@ enum class Stat {
 	SPECIAL_ATTACK,
 	SPECIAL_DEFENSE,
 	ACCURACY,
-	EVASION
+	EVASION,
 };
+
+

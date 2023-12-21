@@ -4,11 +4,11 @@ class Pokemon;
 class Effect {
 private:
 	int mods[8];
-	int turns = 0;
-	double effectChance = 1.0;
-	double attackChance = 1.0;
+	int turns;
+	double effectChance;
+	double attackChance;
 	Status conditions;
-	
+
 public:
 	Effect();
 	~Effect();
@@ -24,8 +24,8 @@ public:
 	bool success();
 	bool immediate();
 	bool turn();
-	static void burn(Pokemon &p);
-	static void paralyze(Pokemon &p);
+	static void burn(Pokemon& p);
+	static void paralyze(Pokemon& p);
 	static void freeze(Pokemon& p);
 	static void poison(Pokemon& p);
 	static void sleep(Pokemon& p);

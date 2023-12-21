@@ -1,31 +1,33 @@
 class Pokemon;
 #include "Type.cpp"
+#include <iostream>
 #pragma once
 class Move {
 private:
-	static Move noMove;
-	static Move struggleMove;
-	static Move confusionMove;
 protected:
+	int effects[19][19];
 	Type type;
 	double power;
 	double accuracy;
 	int priority;
 	int hits;
-	bool checkAccuracy(Pokemon var1, Pokemon var2);
-	virtual void attack(Pokemon var1, Pokemon var2) = 0; //внимательно тут
-	void applyOppEffects(Pokemon var1);
-	void applySelfEffects(Pokemon var1);
-	//describe
-
+	virtual bool checkAccuracy(Pokemon& var1, Pokemon& var2);
+	virtual void applyOppEffects(Pokemon& var1);
+	virtual void applySelfEffects(Pokemon& var1);
+	virtual double effect(Type var1) final;
+	virtual void setX(int var1, Type var2) final;
+	virtual Type zero(int n, Type var1, ...) final;
+	virtual Type half(int n, Type var1, ...) final;
+	virtual Type doub(int n, Type var1, ...) final;
+	virtual double getEffect(int n, Type var1, ...) final;
+	virtual double getEffectForPokemon(Pokemon& var1) final;
+	virtual void setEffect() final;
+	virtual std::string describe();
 public:
+	virtual void attack(Pokemon& var1, Pokemon& var2) = 0; //внимательно тут
 	Move();
-	//деструктор
+	virtual ~Move();
 	Move(Type var1, double var2, double var4);
 	Move(Type var1, double var2, double var4, int var6, int var7);
-	int getPriority();
-	static Move getNoMove();
-	static Move getSruggleMove();
-	static Move getConfusionMove();
-
+	virtual int getPriority() final;
 };
