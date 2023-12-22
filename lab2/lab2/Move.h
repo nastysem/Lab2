@@ -1,6 +1,7 @@
 class Pokemon;
 #include "Type.cpp"
 #include <iostream>
+#include <math.h>
 #pragma once
 class Move {
 private:

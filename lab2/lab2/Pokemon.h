@@ -16,6 +16,8 @@
 #include <stdarg.h>
 #include <string>
 #include "Writer.h"
+#include <memory>
+#include <math.h>
 #pragma once
 class Pokemon {
 private:

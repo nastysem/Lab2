@@ -1,17 +1,4 @@
-﻿#include "Nidorina.h"
-#include "Throh.h"
-#include "Pokemon.h"
-#include "Battle.h" 
-#include <iostream>
-#include "FireMove.h"
-#include "Hitmonlee.h"
-#include "Nidoqueen.h"
-#include "NoMove.h"
-#include "ConfusionMove.h"
-#include "Tyrogue.h"
-#include "NidoranF.h"
-#include "Throh.h"
-#include <iostream>
+﻿#include <iostream>
 #include "Console.h"
 int main()
 {
